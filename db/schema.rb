@@ -39,7 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_10_132929) do
     t.bigint "type_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email"
+    t.string "email", null: false
     t.index ["type_document_id"], name: "index_user_banks_on_type_document_id"
     t.index ["type_user_id"], name: "index_user_banks_on_type_user_id"
   end
