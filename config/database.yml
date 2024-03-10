@@ -16,6 +16,11 @@
 #
 default: &default
   adapter: postgresql
+  database: users  # Replace with your database name
+  username: postgres  # Replace with your PostgreSQL username (might differ)
+  password: 5711  # Replace with your PostgreSQL password
+  host: localhost  # Replace if PostgreSQL is running on a different machine
+  port: 5432  # Standard PostgreSQL port, change if needed
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
