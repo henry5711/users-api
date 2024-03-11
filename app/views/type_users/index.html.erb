@@ -1,14 +1,51 @@
+<% content_for :model do %>
 <p style="color: green"><%= notice %></p>
-
-<h1>Type users</h1>
-
-<div id="type_users">
-  <% @type_users.each do |type_user| %>
-    <%= render type_user %>
-    <p>
-      <%= link_to "Show this type user", type_user %>
-    </p>
-  <% end %>
+<div id="type_users"
+<div id="layoutSidenav_content">
+  <main>
+    <div class="container-fluid px-4">
+      <h1 class="mt-4">Tipo de Usuario</h1>
+      <div class="card mb-4">
+        <div class="card-header">
+          <i class="fas fa-table me-1"></i>
+          DataTable Tipo
+        </div>
+        <div class="card-body">
+          <table id="datatablesSimple">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <% @type_users.each do |model| %>
+              <tr>
+                <td><%= model.id %></td>
+                <td><%= model.name %></td>
+                <td><%= model.description %></td>
+                <td>
+                  <%= link_to "show" , model%>
+               </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
-
-<%= link_to "New type user", new_type_user_path %>
+<%= link_to "Agregar", new_type_user_path %>
+<% end %>
+</div>

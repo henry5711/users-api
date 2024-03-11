@@ -3,6 +3,7 @@ class TypeDocumentsController < ApplicationController
   # GET /type_documents or /type_documents.json
   def index
     @type_documents = TypeDocument.all
+    render layout:"_index"
   end
 
   # GET /type_documents/1 or /type_documents/1.json

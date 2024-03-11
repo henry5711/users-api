@@ -4,6 +4,7 @@ class UserBanksController < ApplicationController
   # GET /user_banks or /user_banks.json
   def index
     @user_banks = UserBank.all
+    render layout:"_index"
   end
 
   # GET /user_banks/1 or /user_banks/1.json

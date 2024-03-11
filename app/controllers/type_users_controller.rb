@@ -4,6 +4,7 @@ class TypeUsersController < ApplicationController
   # GET /type_users or /type_users.json
   def index
     @type_users = TypeUser.all
+    render layout:"_index"
   end
 
   # GET /type_users/1 or /type_users/1.json

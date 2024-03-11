@@ -1,14 +1,72 @@
+<% content_for :model do %>
 <p style="color: green"><%= notice %></p>
-
-<h1>User banks</h1>
-
-<div id="user_banks">
-  <% @user_banks.each do |user_bank| %>
-    <%= render user_bank %>
-    <p>
-      <%= link_to "Show this user bank", user_bank %>
-    </p>
-  <% end %>
+<div id="type_users"
+<div id="layoutSidenav_content">
+  <main>
+    <div class="container-fluid px-4">
+      <h1 class="mt-4">Usuarios</h1>
+      <div class="card mb-4">
+        <div class="card-header">
+          <i class="fas fa-table me-1"></i>
+          DataTable Usuarios
+        </div>
+        <div class="card-body">
+          <table id="datatablesSimple">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Documento</th>
+                <th>Fecha de emisión</th>
+                <th>Fecha de vencimiento</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono principal</th>
+                <th>Teléfono secundario</th>
+                <th>Tipo Usuario</th>
+                <th>Tipo Documento</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>Documento</th>
+                <th>Fecha de emisión</th>
+                <th>Fecha de vencimiento</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono principal</th>
+                <th>Teléfono secundario</th>
+                <th>Tipo Usuario</th>
+                <th>Tipo Documento</th>
+                <th>Acciones</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <% @user_banks.each do |model| %>
+              <tr>
+                <td><%= model.id %></td>
+                <td><%= model.number_document %></td>
+                <td><%= model.document_issue_date %></td>
+                <td><%= model.document_expiration_date %></td>
+                <td><%= model.name %></td>
+                <td><%= model.email %></td>
+                <td><%= model.phone %></td>
+                <td><%= model.second_phone %></td>
+                <td><%= model.phone %></td>
+                <td><%= model.phone %></td>
+                <td>
+                  <%= link_to "show" , model%>
+               </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
-
-<%= link_to "New user bank", new_user_bank_path %>
+<%= link_to "Agregar", new_user_bank_path %>
+<% end %>
+</div>
