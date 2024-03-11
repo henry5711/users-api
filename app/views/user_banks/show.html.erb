@@ -1,10 +1,14 @@
+<% content_for :model do %>
 <p style="color: green"><%= notice %></p>
 
 <%= render @user_bank %>
 
 <div>
   <%= link_to "Edit", edit_user_bank_path(@user_bank) %> |
-  <%= link_to "Back", user_banks_path %>
-
-  <%= button_to "Destroy", @user_bank, method: :delete %>
+  <%= link_to "Back", user_banks_path ,class:"btn btn-secondary"%>
 </div>
+<br>
+<div>
+  <%= button_to "Eliminar", @user_bank, method: :delete ,class:"btn btn-danger"%>
+</div>
+<% end %>

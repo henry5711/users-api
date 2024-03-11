@@ -9,6 +9,7 @@ class TypeUsersController < ApplicationController
 
   # GET /type_users/1 or /type_users/1.json
   def show
+    render layout:"_index"
   end
 
   # GET /type_users/new

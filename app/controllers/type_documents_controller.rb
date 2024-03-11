@@ -8,6 +8,7 @@ class TypeDocumentsController < ApplicationController
 
   # GET /type_documents/1 or /type_documents/1.json
   def show
+    render layout:"_index"
   end
 
   # GET /type_documents/new

@@ -9,6 +9,7 @@ class UserBanksController < ApplicationController
 
   # GET /user_banks/1 or /user_banks/1.json
   def show
+    render layout:"_index"
   end
 
   # GET /user_banks/new

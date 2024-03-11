@@ -1,10 +1,14 @@
+<% content_for :model do %>
 <p style="color: green"><%= notice %></p>
 
 <%= render @type_document %>
 
 <div>
-  <%= link_to "Edit this type document", edit_type_document_path(@type_document) %> |
-  <%= link_to "Back to type documents", type_documents_path %>
-
-  <%= button_to "Destroy this type document", @type_document, method: :delete %>
+  <%= link_to "Edit", edit_type_document_path(@type_document)%> |
+  <%= link_to "Back", type_documents_path ,class:"btn btn-secondary"%>
 </div>
+<br>
+<div>
+  <%= button_to "Eliminar", @type_document, method: :delete,class:"btn btn-danger" %>
+</div>
+<% end %>
