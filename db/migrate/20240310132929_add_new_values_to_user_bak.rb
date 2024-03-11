@@ -1,5 +1,5 @@
 class AddNewValuesToUserBak < ActiveRecord::Migration[7.0]
   def change
-    add_column :user_banks, :email, :string,null:false
+    add_column :user_banks, :email, :string,null:false,unique: true
   end
 end

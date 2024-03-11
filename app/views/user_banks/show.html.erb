@@ -3,8 +3,8 @@
 <%= render @user_bank %>
 
 <div>
-  <%= link_to "Edit this user bank", edit_user_bank_path(@user_bank) %> |
-  <%= link_to "Back to user banks", user_banks_path %>
+  <%= link_to "Edit", edit_user_bank_path(@user_bank) %> |
+  <%= link_to "Back", user_banks_path %>
 
-  <%= button_to "Destroy this user bank", @user_bank, method: :delete %>
+  <%= button_to "Destroy", @user_bank, method: :delete %>
 </div>

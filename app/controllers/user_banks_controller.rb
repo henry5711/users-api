@@ -59,13 +59,12 @@ class UserBanksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_user_bank
       @user_bank = UserBank.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def user_bank_params
-      params.require(:user_bank).permit(:number_document, :document_issue_date, :document_expiration_date, :name, :phone, :second_phone)
+      params.require(:user_bank).permit(:number_document, :document_issue_date, :document_expiration_date, :name,:email, :phone, :second_phone,:type_document_id,:type_user_id)
     end
 end

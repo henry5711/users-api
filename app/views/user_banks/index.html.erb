@@ -10,8 +10,8 @@
           <i class="fas fa-table me-1"></i>
           DataTable Usuarios
         </div>
-        <div class="card-body">
-          <table id="datatablesSimple">
+        <div class="table-responsive">
+          <table id="datatablesSimple" class="table table-striped align-middle">
             <thead>
               <tr>
                 <th>ID</th>
@@ -27,22 +27,7 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th>ID</th>
-                <th>Documento</th>
-                <th>Fecha de emisión</th>
-                <th>Fecha de vencimiento</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Teléfono principal</th>
-                <th>Teléfono secundario</th>
-                <th>Tipo Usuario</th>
-                <th>Tipo Documento</th>
-                <th>Acciones</th>
-              </tr>
-            </tfoot>
-            <tbody>
+            <tbody class="table-group-divider">
               <% @user_banks.each do |model| %>
               <tr>
                 <td><%= model.id %></td>
@@ -67,6 +52,6 @@
     </div>
   </main>
 </div>
-<%= link_to "Agregar", new_user_bank_path %>
+<%= link_to "Agregar", new_user_bank_path ,class:"btn btn-primary" %>
 <% end %>
 </div>

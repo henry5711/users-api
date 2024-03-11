@@ -10,8 +10,8 @@
           <i class="fas fa-table me-1"></i>
           DataTable Tipo
         </div>
-        <div class="card-body">
-          <table id="datatablesSimple">
+        <div class="card-body table-responsive"" >
+          <table id="datatablesSimple" class="table table-striped">
             <thead>
               <tr>
                 <th>ID</th>
@@ -20,15 +20,7 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th>ID</th>
-                <th>Tipo</th>
-                <th>Descripción</th>
-                <th>Acciones</th>
-              </tr>
-            </tfoot>
-            <tbody>
+            <tbody class="table-group-divider">
               <% @type_documents.each do |model| %>
               <tr>
                 <td><%= model.id %></td>
@@ -46,6 +38,6 @@
     </div>
   </main>
 </div>
-<%= link_to "Agregar", new_type_document_path %>
+<%= link_to "Agregar", new_type_document_path,class:"btn btn-primary" %>
 <% end %>
 </div>
