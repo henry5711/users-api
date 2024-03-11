@@ -1,5 +1,12 @@
+
 # Project: user_api
 api para el manejo de usuarios de Sisco Bank C.A
+
+# install: user_api
+## en consola rails db:create
+## rails db:migrate
+## rails db:seed
+## rails server --environment development
 # 📁 Collection: TypeDocumet 
 
 
