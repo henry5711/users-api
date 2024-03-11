@@ -53,6 +53,7 @@
     <%= form.label :Tipo_Usuario, style: "display: block" %>
     <%= collection_select(:user_bank, :type_user_id, TypeUser.all, :id, :name) %>
   </div>
+  <br>
   <div>
     <%= form.submit %>
   </div>
