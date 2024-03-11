@@ -11,50 +11,50 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :Documento, style: "display: block" %>
-    <%= form.text_field :number_document %>
+  <div class="mb-3">
+    <%= form.label :Documento,class:"form-label" %>
+    <%= form.text_field :number_document,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Fecha_de_emisión_del_documento, style: "display: block" %>
-    <%= form.date_field :document_issue_date %>
+  <div  class="mb-3">
+    <%= form.label :Fecha_de_emisión_del_documento,class:"form-label" %>
+    <%= form.date_field :document_issue_date,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Fecha_de_vencimiento_del_documento, style: "display: block" %>
-    <%= form.date_field :document_expiration_date %>
+  <div  class="mb-3">
+    <%= form.label :Fecha_de_vencimiento_del_documento,class:"form-label" %>
+    <%= form.date_field :document_expiration_date,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Nombre, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div  class="mb-3">
+    <%= form.label :Nombre,class:"form-label" %>
+    <%= form.text_field :name,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Email, style: "display: block" %>
-    <%= form.email_field :email %>
+  <div  class="mb-3">
+    <%= form.label :Email,class:"form-label" %>
+    <%= form.email_field :email,class:"form-control" %>
   </div>
-  <div>
-    <%= form.label :Telefono, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.label :Telefono_secundario, style: "display: block" %>
-    <%= form.text_field :second_phone %>
-  </div>
-  <div>
-    <%= form.label :Tipo_Documento, style: "display: block" %>
-    <%= collection_select(:user_bank, :type_document_id, TypeDocument.all, :id, :name) %>
+  <div  class="mb-3">
+    <%= form.label :Telefono,class:"form-label" %>
+    <%= form.text_field :phone,class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Tipo_Usuario, style: "display: block" %>
-    <%= collection_select(:user_bank, :type_user_id, TypeUser.all, :id, :name) %>
+  <div  class="mb-3">
+    <%= form.label :Telefono_secundario,class:"form-label" %>
+    <%= form.text_field :second_phone,class:"form-control" %>
+  </div>
+  <div  class="mb-3">
+    <%= form.label :Tipo_Documento,class:"form-label" %>
+    <%= collection_select(:user_bank, :type_document_id, TypeDocument.all, :id, :name)%>
+  </div>
+
+  <div  class="mb-3">
+    <%= form.label :Tipo_Usuario,class:"form-label" %>
+    <%= collection_select(:user_bank, :type_user_id, TypeUser.all, :id, :name)%>
   </div>
   <br>
-  <div>
+  <div  class="mb-3">
     <%= form.submit %>
   </div>
 <% end %>
